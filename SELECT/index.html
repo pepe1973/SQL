@@ -60,6 +60,7 @@ INSERT INTO szemelyek (nev, telepules, cim, belepes) VALUES
                     <img src="./images/kep_002.png" />
                 </div>
             </div>
+            <h3>Példák:</h3>
             <!-- 1. példa -->
             <div class="pelda">
                 <p>
@@ -79,9 +80,13 @@ WHERE telepules = "Szolnok";
                 <table>
                     <tr>
                         <td>
-                            Válogassuk le a személyek nevét, mint
+                            Válogassuk le a személyek nevét (<span
+                                class="kiemel"
+                                >nev</span
+                            >), mint
                             <span class="kiemel-barna">"Személy"</span>, a
-                            települést, mint
+                            települést (<span class="kiemel">telepules</span>),
+                            mint
                             <span class="kiemel-barna">"Település"</span>
                         </td>
                         <td>
@@ -143,9 +148,13 @@ WHERE telepules = "Szolnok" OR telepules = "Debrecen";
                 <table>
                     <tr>
                         <td>
-                            Válogassuk le a személyek nevét, mint
+                            Válogassuk le a személyek nevét (<span
+                                class="kiemel"
+                                >nev</span
+                            >), mint
                             <span class="kiemel-barna">"Személy"</span>, a
-                            települést, mint
+                            települést (<span class="kiemel">telepules</span>),
+                            mint
                             <span class="kiemel-barna">"Település"</span>
                         </td>
                         <td>
@@ -214,9 +223,14 @@ WHERE belepes > "2006-01-01";
                 <table>
                     <tr>
                         <td>
-                            Válogassuk le a személyek nevét, mint
+                            Válogassuk le a személyek nevét (<span
+                                class="kiemel"
+                                >nev</span
+                            >), mint
                             <span class="kiemel-barna">"Személy"</span>, a
-                            belépések időpontját, mint
+                            belépések időpontját (<span class="kiemel"
+                                >belepes</span
+                            >), mint
                             <span class="kiemel-barna"
                                 >"Belépés időpontja"</span
                             >
@@ -261,28 +275,29 @@ WHERE belepes > "2006-01-01";
                     <img src="./images/kep_011.png" />
                 </div>
             </div>
-            <!-- Feladatok -->
+            <h3>Feladatok:</h3>
+            <!-- 1. feladat -->
             <div class="feladat">
-                <h3>Feladatok:</h3>
-                <ul>
-                    <li>
-                        Sorold fel azokat a szolnoki személyeket, akik
-                        2006.01.01. előtt léptek be. Írasd ki a személyek nevét,
-                        mint <span class="kiemel-barna">"Személy"</span>, a
-                        települést, mint
-                        <span class="kiemel-barna">"Település"</span> és a
-                        belépések időpontját, mint
-                        <span class="kiemel-barna">"Belépés időpontja"</span>.
-                    </li>
-                    <li>
-                        Sorold fel azokat a személyeket, akik 2004.01.01. után
-                        de 2007.12.31. előtt léptek be. Írasd ki a személyek
-                        nevét, mint
-                        <span class="kiemel-barna">"Személy"</span> és a
-                        belépések időpontját, mint
-                        <span class="kiemel-barna">"Belépés időpontja"</span>.
-                    </li>
-                </ul>
+                <p>
+                    <span class="alahuz">1. Feladat:</span> Sorold fel azokat a
+                    szolnoki személyeket, akik 2006.01.01. előtt léptek be.
+                    Írasd ki a személyek nevét, mint
+                    <span class="kiemel-barna">"Személy"</span>, a települést,
+                    mint <span class="kiemel-barna">"Település"</span> és a
+                    belépések időpontját, mint
+                    <span class="kiemel-barna">"Belépés időpontja"</span>.
+                </p>
+            </div>
+            <!-- 2. feladat -->
+            <div class="feladat">
+                <p>
+                    <span class="alahuz">2. Feladat:</span> Sorold fel azokat a
+                    személyeket, akik 2004.01.01. után de 2007.12.31. előtt
+                    léptek be. Írasd ki a személyek nevét, mint
+                    <span class="kiemel-barna">"Személy"</span> és a belépések
+                    időpontját, mint
+                    <span class="kiemel-barna">"Belépés időpontja"</span>.
+                </p>
             </div>
         </div>
     </body>
