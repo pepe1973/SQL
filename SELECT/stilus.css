@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Open Sans',
+        'Helvetica Neue',
+        sans-serif;
+}
+
+.keret {
+    padding: 1.5em;
+    margin-bottom: 1em;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+.pelda,
+.feladat {
+    border: 2px solid #ddd;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+ul {
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+ul li {
+    margin-bottom: 1em;
+}
+
+h1,
+h3 {
+    margin-bottom: 1em;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+code {
+    color: green;
+    font-weight: bold;
+}
+
+.leiras,
+.elokeszulet {
+    margin-bottom: 1em;
+}
+
+.kiemel {
+    color: red;
+    font-weight: bolder;
+}
+
+.kiemel-barna {
+    color: brown;
+}
+
+.alahuz {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+table {
+    border-spacing: 0.5em;
+}
+
+td {
+    border: 1px solid #aaa;
+    padding: 0.5em;
+}
