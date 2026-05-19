@@ -86,3 +86,12 @@ td {
     border: 1px solid #aaa;
     padding: 0.5em;
 }
+
+button {
+    background-color: green;
+    border: none;
+    color: whitesmoke;
+    padding: 5px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}

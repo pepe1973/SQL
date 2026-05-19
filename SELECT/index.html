@@ -206,7 +206,7 @@ WHERE telepules = "Szolnok" OR telepules = "Debrecen";
             <div class="pelda">
                 <p>
                     <span class="alahuz">3. Példa:</span> Sorold fel azokat a
-                    személyeket, akik 2006.01.01. előtt léptek be! Írasd ki a
+                    személyeket, akik 2006.01.01. után léptek be! Írasd ki a
                     személyek nevét, mint
                     <span class="kiemel-barna">"Személy"</span> és a belépés
                     időpontját, mint
@@ -216,10 +216,13 @@ WHERE telepules = "Szolnok" OR telepules = "Debrecen";
                     <code>
 SELECT nev AS "Személy", belepes AS "Belépés időpontja"
 FROM szemelyek
-WHERE belepes > "2006-01-01";
+WHERE belepes &gt; "2006-01-01";
                     </code>
                 </pre>
                 <p>Mindig egy mondatként gondoljunk a leképezésünkre.</p>
+                <p class="kiemel">
+                    Figyeljünk a dátumra: 2006.01.01. helyett 2006-01-01!
+                </p>
                 <table>
                     <tr>
                         <td>
@@ -256,7 +259,7 @@ WHERE belepes > "2006-01-01";
                             mint <span class="kiemel-barna">"2006-01-01"</span>.
                         </td>
                         <td>
-                            <code>WHERE belepes > "2006-01-01";</code>
+                            <code>WHERE belepes &gt; "2006-01-01";</code>
                         </td>
                     </tr>
                 </table>
@@ -287,6 +290,88 @@ WHERE belepes > "2006-01-01";
                     belépések időpontját, mint
                     <span class="kiemel-barna">"Belépés időpontja"</span>.
                 </p>
+                <button onclick="felfed(0)">Megoldás</button>
+                <div
+                    class="megoldas"
+                    style="display: none"
+                >
+                    <pre>
+                    <code>
+SELECT nev AS "Személy", telepules AS "Település", belepes AS "Belépés időpontja"
+FROM szemelyek
+WHERE telepules = "Szolnok" AND belepes &lt; "2006-01-01";
+                    </code>
+                </pre>
+                    <p>Mindig egy mondatként gondoljunk a leképezésünkre.</p>
+                    <p class="kiemel">
+                        Figyeljünk a dátumra: 2006.01.01. helyett 2006-01-01!
+                    </p>
+                    <table>
+                        <tr>
+                            <td>
+                                Válogassuk le a személyek nevét (<span
+                                    class="kiemel"
+                                    >nev</span
+                                >), mint
+                                <span class="kiemel-barna">"Személy"</span>, a
+                                települést (<span class="kiemel">telepules</span
+                                >), mint
+                                <span class="kiemel-barna">"Település"</span>, a
+                                belépések időpontját (<span class="kiemel"
+                                    >belepes</span
+                                >), mint
+                                <span class="kiemel-barna"
+                                    >"Belépés időpontja"</span
+                                >
+                            </td>
+                            <td>
+                                <code
+                                    >SELECT nev AS "Személy", telepules AS
+                                    "Település", belepes AS "Belépés
+                                    időpontja"</code
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                a
+                                <span class="kiemel">szemelyek</span> táblából,
+                            </td>
+                            <td>
+                                <code>FROM szemelyek</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ahol a <span class="kiemel">telepules</span>
+                                <span class="kiemel-barna">"Szolnok"</span> és a
+                                <span class="kiemel">belepes</span> kisebb, mint
+                                <span class="kiemel-barna">"2006-01-01"</span>.
+                            </td>
+                            <td>
+                                <code
+                                    >WHERE telepules = "Szolnok" AND belepes
+                                    &lt; "2006-01-01";</code
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="kepek">
+                        <img src="./images/kep_012.png" />
+                        <img src="./images/kep_013.png" />
+                    </div>
+                    <br />
+                    <p>
+                        A virtuális táblában a mezőnevek:
+                        <span class="kiemel-barna">"Személy"</span>,
+                        <span class="kiemel-barna">"Település"</span> és
+                        <span class="kiemel-barna">"Belépés időpontja"</span>.
+                    </p>
+                    <br />
+                    <div class="kepek">
+                        <img src="./images/kep_014.png" />
+                    </div>
+                </div>
             </div>
             <!-- 2. feladat -->
             <div class="feladat">
@@ -298,7 +383,89 @@ WHERE belepes > "2006-01-01";
                     időpontját, mint
                     <span class="kiemel-barna">"Belépés időpontja"</span>.
                 </p>
+                <button onclick="felfed(1)">Megoldás</button>
+                <div
+                    class="megoldas"
+                    style="display: none"
+                >
+                    <pre>
+                    <code>
+SELECT nev AS "Személy", belepes AS "Belépés időpontja"
+FROM szemelyek
+WHERE belepes &gt; "2004-01-01" AND belepes &lt; "2007-12-31";
+                    </code>
+                </pre>
+                    <p>Mindig egy mondatként gondoljunk a leképezésünkre.</p>
+                    <p class="kiemel">
+                        Figyeljünk a dátumra: 2004.01.01. helyett 2004-01-01 és
+                        2007.12.31. helyett 2007-12-31!
+                    </p>
+                    <table>
+                        <tr>
+                            <td>
+                                Válogassuk le a személyek nevét (<span
+                                    class="kiemel"
+                                    >nev</span
+                                >), mint
+                                <span class="kiemel-barna">"Személy"</span>, a
+                                belépések időpontját (<span class="kiemel"
+                                    >belepes</span
+                                >), mint
+                                <span class="kiemel-barna"
+                                    >"Belépés időpontja"</span
+                                >
+                            </td>
+                            <td>
+                                <code
+                                    >SELECT nev AS "Személy", belepes AS
+                                    "Belépés időpontja"</code
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                a
+                                <span class="kiemel">szemelyek</span> táblából,
+                            </td>
+                            <td>
+                                <code>FROM szemelyek</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ahol a
+                                <span class="kiemel">belepes</span> nagyobb,
+                                mint
+                                <span class="kiemel-barna">"2004-01-01"</span>
+                                és a <span class="kiemel">belepes</span> kisebb,
+                                mint
+                                <span class="kiemel-barna">"2007-12-31"</span>.
+                            </td>
+                            <td>
+                                <code
+                                    >WHERE belepes &gt; "2004-01-01" AND belepes
+                                    &lt; "2007-12-31";</code
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="kepek">
+                        <img src="./images/kep_015.png" />
+                        <img src="./images/kep_016.png" />
+                    </div>
+                    <br />
+                    <p>
+                        A virtuális táblában a mezőnevek:
+                        <span class="kiemel-barna">"Személy"</span> és
+                        <span class="kiemel-barna">"Belépés időpontja"</span>.
+                    </p>
+                    <br />
+                    <div class="kepek">
+                        <img src="./images/kep_017.png" />
+                    </div>
+                </div>
             </div>
         </div>
+        <script src="./felfed.js"></script>
     </body>
 </html>
